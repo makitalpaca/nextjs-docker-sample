@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  nextjs-docker-sample:
+    container_name: nextjs-docker-sample
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      # Mount the workspace folder
+      - .:/workspace
+      # - /working/node_modules
+      
+    # 擬似端末(キーボードによる入力)をコンテナに結びつける
+    tty: true
+    # 標準入出力とエラー出力をコンテナに結びつける
+    stdin_open: true
+    ports:
+      - "3000:3000"
