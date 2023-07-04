@@ -1,8 +1,6 @@
 version: "3"
-
 services:
   nextjs-docker-sample:
-    container_name: nextjs-docker-sample
     build:
       context: ./frontend
       dockerfile: Dockerfile

@@ -27,22 +27,21 @@
           "donjayamanne.githistory",
           "ms-vscode-remote.remote-wsl",
           "MS-vsliveshare.vsliveshare",
-          "mhutchie.git-graph",
+          "mhutchie.git-graph"
         ],
         "settings": {
           "editor.defaultFormatter": "esbenp.prettier-vscode",
           "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": true
+            "source.fixAll.eslint": true
           },
           "editor.formatOnSave": false,
           "eslint.packageManager": "yarn",
-          "typescript.enablePromptUseWorkspaceTsdk": true,
-        },
+          "typescript.enablePromptUseWorkspaceTsdk": true
+        }
       }
     },
     
-
-    "shutdownAction": "stopCompose",
+    "shutdownAction": "stopCompose"
     // // コンテナ起動後に実行するコマンド
     // "postCreateCommand": "yarn install",
 
