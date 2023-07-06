@@ -2,13 +2,13 @@
     "name": "NextJS Docker Sample",
 
     // docker-compose.ymlでイメージ・コンテナを作成
-    "dockerComposeFile": "../docker-compose.yml",
+    "dockerComposeFile": "../../docker-compose.yml",
 
     // 使用するサービス
     "service": "nextjs-docker-sample",
 
     // VS Codeのワークスペースフォルダ
-    "workspaceFolder": "/workspace/frontend",
+    "workspaceFolder": "/workspace/frontend/my-app",
 
     "customizations": {
       "vscode": {	
@@ -41,16 +41,9 @@
       }
     },
     
-    "shutdownAction": "stopCompose"
-    // // コンテナ起動後に実行するコマンド
-    // "postCreateCommand": "yarn install",
+    "shutdownAction": "stopCompose",
 
-    // // コンテナ内で開くときに自動的に起動するタスク
-    // "postStartCommand": "yarn dev",
+    "postStartCommand": "yarn dev",
 
-    // // コンテナを閉じるときに自動的に実行するタスク
-    // "postStopCommand": "echo 'Container stopped'",
-
-    // // リモートユーザーの設定
-    // "remoteUser": "node"
+    "remoteUser": "node"
 }

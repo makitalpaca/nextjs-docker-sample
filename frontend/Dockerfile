@@ -1,15 +1,13 @@
-# ベースイメージの指定
 FROM node:18-alpine3.16
 
-# 作業ディレクトリの指定
-WORKDIR /workspace
+RUN mkdir -p /workspace/frontend/my-app && \
+    chown -R node:node /workspace/frontend/my-app
+WORKDIR /workspace/frontend/my-app
 
-# COPY package*.json ./
+USER node
 
-# RUN yarn install
+COPY --chown=node:node my-app/package.json my-app/yarn.lock ./
 
-# COPY . .
+RUN yarn install
 
-# EXPOSE 3000
-
-# CMD ["yarn", "dev"]
+COPY --chown=node:node . .
